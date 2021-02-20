@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage ('Checkout') {
             steps {
-                git branch: 'main', credentialsId: '781a5e64-3a8a-46d0-adb5-8216ef6eeea7', url: 'https://github.com/schoener/algorithms-interview.git'
-            }
+                git branch: 'main', credentialsId: 'multibranch_ssh_id', url: 'https://github.com/schoener/algorithms-interview.git'            }
         }
 
         stage ('Build') {
